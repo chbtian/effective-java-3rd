@@ -1,0 +1,19 @@
+PlantUML中类的关系：
+*   泛化， Generalization ： <|--
+*   实现， Realization ： <|..
+*   关联， Association ： <--
+*   组合， Composition ： *--
+*   聚合， Aggregation ： o--
+*   依赖， Dependency ：  <..
+属性和方法的修复符：
+- 、# 、+ 表示 private、protected、public
+
+排版：
+up      上
+down    下
+left    左
+right   右
+例如：A<.left.B，表示B依赖A，A放在B左边
+
+注释：
+note [left|right]: 描述
