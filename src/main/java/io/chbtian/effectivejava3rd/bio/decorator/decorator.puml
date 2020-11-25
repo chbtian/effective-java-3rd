@@ -1,0 +1,16 @@
+@startuml
+interface Component
+class ConcreteComponent
+Component <|.. ConcreteComponent
+
+abstract class Decorator{
+}
+Component <|.. Decorator
+Component --o Decorator
+
+class ConcreteDecoratorOne
+class ConcreteDecoratorTwo
+Decorator <|-- ConcreteDecoratorOne
+Decorator <|-- ConcreteDecoratorTwo
+
+@enduml
