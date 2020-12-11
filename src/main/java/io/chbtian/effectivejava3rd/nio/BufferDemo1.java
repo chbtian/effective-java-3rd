@@ -7,6 +7,24 @@ import java.util.Arrays;
 
 public class BufferDemo1 {
     public static void main(String[] args) {
+
+        /**
+         * ByteBuffer
+         *  创建后limit=capacity
+         *  存数据时，只是position在递增，limit不变
+         *  flip和clear时，limit才变
+         */
+        ByteBuffer buf = ByteBuffer.allocate(10);
+        buf.putInt(1);
+        System.out.println(buf.position());
+        System.out.println(buf.limit());
+        buf.putInt(2);
+        buf.flip();
+        System.out.println(buf.position());
+        System.out.println(buf.limit());
+       // System.out.println(Integer.BYTES);
+        System.out.println(buf.limit());
+
         //字节编址顺序
         //Big-endian：大端、高位编址，就是数据从高位地址向低位地址存储
         //Little-endian：小端、低位编址，就是数据从低位地址向高位地址存储

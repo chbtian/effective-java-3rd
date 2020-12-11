@@ -41,7 +41,8 @@ public class ChannelDemo2 {
             buf.clear();
 
             sc.read(buf);
-            System.out.println(new String(buf.array()));
+
+
             buf.clear();
         }
     }
@@ -55,7 +56,10 @@ public class ChannelDemo2 {
         while(true) {
             sc.read(buf);
             buf.flip();
-            System.out.println(new String(buf.array()));//使用底层数组是不对的
+            byte[] b = new byte[buf.limit()];
+
+            buf.get(b);
+            System.out.println(new String(b));
             buf.clear();
             buf.put("收到".getBytes());
             buf.flip();
