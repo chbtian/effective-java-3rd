@@ -1,4 +1,4 @@
-package io.chbtian.effectivejava3rd.rpc.rpc02;
+package io.chbtian.effectivejava3rd.rpc.rpc04;
 
 import io.chbtian.effectivejava3rd.rpc.IUserService;
 import io.chbtian.effectivejava3rd.rpc.User;
@@ -6,7 +6,7 @@ import io.chbtian.effectivejava3rd.rpc.User;
 public class UserServiceImpl implements IUserService {
     @Override
     public User getUserById(Integer id) {
-        return new User(id,"tom2");
+        return new User(id,"tom4");
     }
 
     @Override

@@ -8,4 +8,9 @@ public class UserServiceImpl implements IUserService {
     public User getUserById(Integer id) {
         return new User(id,"tom");
     }
+
+    @Override
+    public User getUserByIdAndName(Integer id, String name) {
+        return new User(id,name);
+    }
 }
