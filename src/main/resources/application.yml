@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: effective-java-3rd
+server:
+  port: 8080
